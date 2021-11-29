@@ -1,0 +1,16 @@
+@import "variables";
+
+.app-main {
+  padding: var(--global-padding);
+  margin: 0 auto;
+}
+
+.app-title {
+  margin-top: 0;
+}
+
+@media screen and (min-width: $screen-medium) {
+  main {
+    width: 70%;
+  }
+}
