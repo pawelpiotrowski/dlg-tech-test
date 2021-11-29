@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  --app-color-font: #222;
+  --app-color-bckd: #fbfbfb;
+  --global-padding: 16px;
+  --screen-medium: 768px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --app-color-font: #fbfbfb;
+    --app-color-bckd: #222;
+  }
+}
+
+html,
+body {
+  background-color: var(--app-color-bckd);
+  color: var(--app-color-font);
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Oswald", Arial, sans-serif;
+}
