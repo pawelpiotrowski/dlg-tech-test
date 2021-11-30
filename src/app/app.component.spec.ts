@@ -3,6 +3,7 @@ import { of } from 'rxjs';
 import { AppComponent } from './app.component';
 import { DataService } from './data/data.service';
 import { Faq } from './data/faq';
+import { AccordionModule } from './features/accordion/accordion.module';
 
 const dataServiceSpy = jasmine.createSpyObj('DataService', ['fetchFaq']);
 const mockedFaq: Faq = {
@@ -17,6 +18,7 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AppComponent],
+      imports: [AccordionModule],
       providers: [{ provide: DataService, useValue: dataServiceSpy }],
     }).compileComponents();
   });
@@ -27,17 +29,21 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'dlg-tech-test'`, () => {
+  it(`should have as title 'Have a Question? We Can Help'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('dlg-tech-test');
+    expect(app.title).toEqual('Have a Question? We Can Help');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.app-title')?.textContent).toContain('FAQ');
+    expect(compiled.querySelector('.app-title')?.textContent).toContain(
+      app.title
+    );
   });
 
   it('should call data service to fetch faqs', () => {

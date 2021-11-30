@@ -8,7 +8,7 @@ import { Faq, FaqResponse } from './data/faq';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'dlg-tech-test';
+  title = 'Have a Question? We Can Help';
   faqs: Faq[] = [];
 
   constructor(private dataApi: DataService) {}

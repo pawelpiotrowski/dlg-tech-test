@@ -6,7 +6,10 @@
 }
 
 .app-title {
+  border-bottom: 12px solid var(--app-color-font);
   margin-top: 0;
+  padding-bottom: var(--global-padding);
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: $screen-medium) {
