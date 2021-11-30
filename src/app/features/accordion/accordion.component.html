@@ -1,1 +1,7 @@
-<p>accordion works! {{ data.length }}</p>
+<app-accordion-item
+  *ngFor="let item of data; let i = index"
+  [item]="item"
+  [itemLabel]="'Q' + (i + 1)"
+  [isExpanded]="isExpanded(item)"
+  (toggleItem)="toggleExpandItem(item)"
+></app-accordion-item>

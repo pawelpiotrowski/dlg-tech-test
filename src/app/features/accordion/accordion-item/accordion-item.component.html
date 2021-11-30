@@ -1,0 +1,16 @@
+<article class="item" [ngClass]="{ 'item--expanded': isExpanded }">
+  <header (click)="onToggleItem()" class="item-header">
+    <h1 class="item-title">
+      <span class="item-title__label">{{ itemLabel }}</span>
+      <span class="item-title__text">{{ item?.question }}</span>
+    </h1>
+    <button class="item-toggle">
+      <svg viewBox="0 0 357 357">
+        <path d="M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z" />
+      </svg>
+    </button>
+  </header>
+  <p *ngIf="isExpanded" class="item-content">
+    {{ item?.answer }}
+  </p>
+</article>

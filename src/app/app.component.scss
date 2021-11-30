@@ -1,8 +1,12 @@
 @import "variables";
 
 .app-main {
+  display: flex;
+  flex-direction: column;
   padding: var(--global-padding);
+  height: calc(100% - (#{var(--global-padding)} * 2));
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .app-title {

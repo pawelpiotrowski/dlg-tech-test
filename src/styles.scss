@@ -3,22 +3,27 @@
 html {
   --app-color-font: #222;
   --app-color-bckd: #fbfbfb;
+  --app-color-bckd-contrast: #aaa;
   --global-padding: 16px;
   --screen-medium: 768px;
 }
+/**
+* Dark mode handler
+*/
 
-@media (prefers-color-scheme: dark) {
-  html {
-    --app-color-font: #fbfbfb;
-    --app-color-bckd: #222;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     --app-color-font: #fbfbfb;
+//     --app-color-bckd: #222;
+//   }
+// }
 
 html,
 body {
   background-color: var(--app-color-bckd);
   color: var(--app-color-font);
   height: 100%;
+  overflow: hidden;
 }
 body {
   margin: 0;

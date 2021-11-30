@@ -1,0 +1,8 @@
+:host {
+  overflow-y: auto;
+
+  app-accordion-item {
+    border-bottom: 3px solid var(--app-color-font);
+    display: block;
+  }
+}
